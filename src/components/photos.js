@@ -22,6 +22,8 @@ const Photos = props =>	(
 			<p>You search did not return any results. Please try again.</p>
 		</li>
 	</ul>
+	
+	
 );
 
 export default Photos;

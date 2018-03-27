@@ -1,9 +1,11 @@
 //main-nav.js
 
 import React from 'react';
-import Food from '../components/food';
-import Cats from '../components/cats';
-import Dogs from '../components/dogs';
+
+//components
+import Food from './food';
+import Cats from './cats';
+import Dogs from './dogs';
 
 const MainNav = props =>	(
 	<nav className="main-nav">

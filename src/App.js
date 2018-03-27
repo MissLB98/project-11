@@ -1,32 +1,33 @@
 import React, { Component } from 'react';
-import Form from './components/form';
-import MainNav from './components/mainNav';
-import Photos from './components/photos';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+//components
+import Navigation from './components/Navigation';
+import Home from './components/Home';
+import ImageContainer from './components/ImageContainer';
+
+//App
 class SearchApp extends Component {
 	
-	constructor()	{
+	constructor() {
 		super();
-		this.state =	{
-			
-		}
+		this.state = {
+			photos: []
+		};
 	}
 	
-  render() {
+	render() {
     return (
-		<div className="container">
-			<h1>React Photo Gallery</h1>
-			<p>Displaying photos with the Flickr API</p>
-	  
-			<Form />
-
-			<MainNav />
-
-			<div className="photo-container">
-				<h2>Results</h2>
-				<Photos />
-			</div>
-		</div>
+      <BrowserRouter>
+          <div id="page-container">
+            <Navigation />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/search/" component={Home} />
+              <Route path="/search/:query" component={ImageContainer} />
+            </Switch>
+          </div>
+      </BrowserRouter>
     );
   }
 };
