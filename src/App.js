@@ -32,6 +32,7 @@ class SearchApp extends Component {
             </Switch>
 			
 			<p>If the page doesn't redirect you to your searches, then please reload and try again by hitting F5 on your keyboard.</p>
+			
           </div>
       </BrowserRouter>
     );
