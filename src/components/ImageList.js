@@ -5,7 +5,7 @@ function ImageList(props) {
 
 
   return (
-    <ul className="image-list">
+    <ul /*className="image-list"*/>
       <Image />
     </ul>
   );

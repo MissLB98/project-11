@@ -19,13 +19,19 @@ class SearchApp extends Component {
 	render() {
     return (
       <BrowserRouter>
-          <div id="page-container">
+          <div /*id="page-container"*/>
+			<h1>React Gallery</h1>
+			<p>Using the Flickr API</p>
+			
             <Navigation />
+			
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/search/" component={Home} />
-              <Route path="/search/:query" component={ImageContainer} />
+				<Route exact path="/" component={Home} />
+				<Route exact path="/search/" component={Home} />
+				<Route path="/search/:query" component={ImageContainer} />
             </Switch>
+			
+			<p>If the page doesn't redirect you to your searches, then please reload and try again by hitting F5 on your keyboard.</p>
           </div>
       </BrowserRouter>
     );
