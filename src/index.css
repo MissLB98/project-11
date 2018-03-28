@@ -6,6 +6,13 @@ body {
 	color: #444;
 	font-size: 1rem;
 	line-height: 1.5;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.container	{
+	position: relative;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -37,6 +44,7 @@ a {
 
 /* form */
 form {
+	width: 90%;
 	max-width: 460px;
 	display: flex;
 	margin: 0 auto 32px;
@@ -44,17 +52,17 @@ form {
 
 form button {
 	outline: none;
-	background-color: maroon;
 	border: none;
 	padding: 0px 15px;
 	border-radius: 0 0.35em 0.35em 0;
 	cursor: pointer;
+	transition: all .3s;
 }
 
 .search-icon	{
 	height: 30px;
 	width: 30px;
-	fill: #fff;
+	fill: #888;
 }
 
 #search-bar {
@@ -79,11 +87,12 @@ ul li {
 
 ul li a {
 	display: block;
-	background: maroon;
+	background: #a18800;
 	border: none;
 	border-radius: 3px;
 	padding: 5px;
 	color: #fff;
+	transition: all .3s;
 }
 
 ul .active,
@@ -163,23 +172,8 @@ form button:hover {
 /* media queries */
 @media (min-width: 768px)  {
   
-	.container {
-		max-width: 960px;
-		margin: auto;
-	}
-	
 	.image-container a	{
 		margin: 10px;
 		padding: 8px;
 	}
-  
-	/*ul {
-		display: flex;
-		justify-content: center;
-	}
-  
-	ul li {
-		margin: 10px;
-		width: 100px;
-	}*/
 }

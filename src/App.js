@@ -19,7 +19,7 @@ class SearchApp extends Component {
 	render() {
     return (
       <BrowserRouter>
-          <div /*id="page-container"*/>
+          <div className="container">
 			<h1 className="heading">React Gallery</h1>
 			<p>Using the Flickr API</p>
 			
