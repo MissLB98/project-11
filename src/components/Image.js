@@ -5,7 +5,7 @@ class Image extends React.Component {
   render() {
     return (
       <a href={this.props.url} target="_blank">
-        <img /*className='photo'*/ src={this.props.source} alt='' />
+        <img src={this.props.source} alt='' />
       </a>
     );
   }

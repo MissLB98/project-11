@@ -20,7 +20,7 @@ class SearchApp extends Component {
     return (
       <BrowserRouter>
           <div /*id="page-container"*/>
-			<h1>React Gallery</h1>
+			<h1 className="heading">React Gallery</h1>
 			<p>Using the Flickr API</p>
 			
             <Navigation />
@@ -31,7 +31,9 @@ class SearchApp extends Component {
 				<Route path="/search/:query" component={ImageContainer} />
             </Switch>
 			
-			<p>If the page doesn't redirect you to your searches, then please reload and try again by hitting F5 on your keyboard.</p>
+			<p className="instruction"><span>WARNING: </span>If you are not redirected to your searches, then please try again by reloading the page.</p>
+			
+			<p>&copy; Leah Birch</p>
 			
           </div>
       </BrowserRouter>

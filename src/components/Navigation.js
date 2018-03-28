@@ -12,19 +12,19 @@ class Navigation extends React.Component {
 
 	render() {
 		return (
-		  <div /*className="navigation-container"*/>
+		  <div>
 			<SearchInput onSubmit={this.navigateURL} />
 			
-			<h1>Suggestions</h1>
-			<ul /*className="gif-name-container"*/>
-				<li /*className="image-names"*/>
-					<NavLink /*className="image-names-text"*/ gifname='LadyNoir' to='/search/ladynoir'>LadyNoir</NavLink>
+			<h1>Search Suggestions</h1>
+			<ul>
+				<li>
+					<NavLink gifname='LadyNoir' to='/search/ladynoir'>LadyNoir</NavLink>
 				</li>
 				<li className="image-names">
-					<NavLink /*className="image-names-text"*/ to='/search/hugs'>Hugs</NavLink>
+					<NavLink to='/search/bug'>Bug</NavLink>
 				</li>
 				<li className="image-names">
-					<NavLink /*className="image-names-text"*/ to='/search/hamster'>Hamster</NavLink>
+					<NavLink to='/search/meme'>Meme</NavLink>
 				</li>
 			</ul>
 		  </div>

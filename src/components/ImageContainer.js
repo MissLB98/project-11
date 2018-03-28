@@ -50,7 +50,7 @@ class ImageContainer extends React.Component {
 
 		if (this.state.hasPhotos || this.state.loading) {
 			heading = <div>
-				<h1 /*className="image-title"*/>Now showing images of: {query}</h1>
+				<h1 className="img-h1">Now showing images of: <span className="query">{query}</span></h1>
 			</div>
 
 			return (
@@ -58,9 +58,9 @@ class ImageContainer extends React.Component {
 				{heading}
 				{
 				  (this.state.loading)
-					? <div /*className='loading'*/> </div>
+					? <div className='loading'> </div>
 					:
-					<div /*className="image-container"*/>
+					<div className="image-container">
 					  {
 						(photos.length > 0)
 						  ? photos.map((photo) => {

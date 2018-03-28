@@ -1,127 +1,185 @@
+/* base */
+
 body {
-  text-align: center;
-  font-family: verdana, sans-serif;
-  color: #3f4850;
+	text-align: center;
+	font-family: verdana, sans-serif;
+	color: #444;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0 auto;
+	padding: 0;
 }
 
-h2 {
-  font-size: 2em;
-  margin: 52px 0 40px;
-  text-transform: capitalize;
+.heading	{
+	text-transform: capitalize;
+	font-size: 1.5rem;
+	padding: 1em 8px;
+	margin: 0;
+	background: #000;
+	color: #fff;
+}
+
+h1	{
+	font-size: 1.2em;
 }
 
 ul {
-  list-style-type: none;
-  padding-left: 0;
+	list-style-type: none;
+	padding: 20px 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
-.search-form {
-  max-width: 460px;
-  display: flex;
-  margin: 0 auto 32px;
+/* form */
+form {
+	max-width: 460px;
+	display: flex;
+	margin: 0 auto 32px;
 }
 
-.search-form button {
-  outline: none;
-  background-color: #438bbd;
-  border: none;
-  padding: 0px 15px;
-  border-radius: 0 0.35em 0.35em 0;
-  cursor: pointer;
+form button {
+	outline: none;
+	background-color: maroon;
+	border: none;
+	padding: 0px 15px;
+	border-radius: 0 0.35em 0.35em 0;
+	cursor: pointer;
 }
 
-input {
-  font-size: 1em;
-  width: 100%;
-  background-color: #edeff0;
-  padding: 10px 15px;
-  border: 3px solid #d7dbdf;
-  border-right: none;
-  border-radius: 0.35em 0 0 0.35em;
-  outline: none;
+.search-icon	{
+	height: 30px;
+	width: 30px;
+	fill: #fff;
 }
 
-.main-nav li {
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-.main-nav a {
-  display: block;
-  background: #438bbd;
-  border-radius: 3px;
-  padding: 5px;
-  color: #fff;
-}
-
-.main-nav .active,
-.main-nav a:hover,
-.search-form button:hover {
-  background-color: #275270;
-}
-
-.photo-container ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  -ms-align-items: flex-start;
-  align-items: flex-start;
-}
-
-.photo-container ul li {
-  width: 220px;
-  height: 165px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.photo-container ul img {
-  width: 100%;
-  transform: scale(1.25);
-  transition: transform 1.25s;
-}
-
-.photo-container li:hover img {
-  transform: scale(1.65);
-}
-
-.photo-container .not-found {
-  width: 100%;
+#search-bar {
+	font-size: 1em;
+	width: 100%;
+	background-color: #fff;
+	padding: 10px 15px;
+	border: 3px solid #ccc;
+	border-right: none;
+	border-radius: 0.35em 0 0 0.35em;
+	outline: none;
 }
 
 
-@media only screen and (max-width: 767px)  {
-  body {
-    padding-top: 2em;
-  }
+/* navigation */
+ul li {
+	width: 100%;
+	max-width: 100px;
+	margin: 8px;
+	margin-bottom: 1em;
+}
+
+ul li a {
+	display: block;
+	background: maroon;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+	color: #fff;
+}
+
+ul .active,
+ul a:hover,
+ul a:focus,
+form button:hover {
+	background: black;
+}
+
+
+/*
+ Loading gif
+*/
+
+.loading {
+  height: 240px;
+  width: 240px;
+  margin: 30px auto 0;
+  /*background: url('https://upload.wikimedia.org/wikipedia/commons/7/7d/Pedro_luis_romani_ruiz.gif');*/
+  background: url('https://upload.wikimedia.org/wikipedia/commons/6/66/Loadingsome.gif');
+  background-size: cover;
+}
+
+
+/* images */
+.image-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+}
+
+.image-container img {
+	flex: 1;
+	width: 200px;
+	max-width: 280px;
+	margin: 15px auto;
+	padding: 0 15px;
+}
+
+
+.image-container img:hover {
+	transform: scale(1.3);
+	transition: transform 1s;
+}
+
+/* INFO */
+
+.instruction	{
+	margin: 30px auto;
+	padding: 10px;
+	color: #fff;
+	background: #131122;
+	width: 90%;
+	max-width: 600px;
+	border-radius: 6px;
+}
+
+.instruction span	{
+	color: red;
+}
+
+.img-h1	{
+	font-weight: 100;
+}
+
+.query	{
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+
+/* media queries */
+@media (min-width: 768px)  {
   
-  .photo-container li {
-    margin: auto;
-  }
+	.container {
+		max-width: 960px;
+		margin: auto;
+	}
+	
+	.image-container a	{
+		margin: 10px;
+		padding: 8px;
+	}
   
-}
-
-@media only screen and (min-width: 768px)  {
-  body {
-    padding-top: 4em;
-  }
+	/*ul {
+		display: flex;
+		justify-content: center;
+	}
   
-  .container {
-    max-width: 960px;
-    margin: auto;
-  }
-  
-  .main-nav ul {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .main-nav li {
-    margin: 10px;
-    width: 100px;
-  }
+	ul li {
+		margin: 10px;
+		width: 100px;
+	}*/
 }
