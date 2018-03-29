@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //components
-import Navigation from './components/Navigation';
+import Navigation from './components/MainNav';
 import Home from './components/Home';
-import ImageContainer from './components/ImageContainer';
+import ImageContainer from './components/PhotoContainer';
 
 //App
 class SearchApp extends Component {

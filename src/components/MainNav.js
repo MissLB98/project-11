@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 // components
-import SearchInput from './SearchInput';
+import SearchInput from './Search';
 
 class Navigation extends React.Component {
 
