@@ -34,7 +34,7 @@ class ImageContainer extends React.Component {
 		this.showContent(this.props.match.params.query);
     }
 	
-    componentWillReceive = (nextProps) => {
+    componentWillReceiveProps = (nextProps) => {
 		const currentQuery = this.props.match.params.query;
 		const nextQuery = nextProps.match.params.query;
 
@@ -69,9 +69,9 @@ class ImageContainer extends React.Component {
 							);
 						  })
 						  : <ImageNotFound />
-					  }
+					  };
 					</div>
-				}
+				};
 			  </div>
 			);
         }
